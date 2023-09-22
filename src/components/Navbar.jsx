@@ -1,11 +1,12 @@
 import React from "react";
 import Container from "./Container";
 import LogoIcon from "./LogoIcon";
-import BarsIcon from "./BarsIcon";
+import BarsIcon from "../BarsIcon";
 import Menu from "./Menu";
 import { FaSearch } from "react-icons/fa";
 import SearchForm from "./SearchForm";
 import clsx from "clsx";
+import Link from "./Link";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = React.useState(false);
@@ -25,28 +26,38 @@ const Navbar = () => {
             Help Center
           </a>
         </div>
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-4 xl:hidden">
           <FaSearch
             onClick={() => setSearchOpen(true)}
             className="cursor-pointer duration-200 ease-in-out hover:scale-[120%]"
           />
           <BarsIcon menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
         </div>
+        <div className="hidden items-center gap-4 xl:flex">
+          <Link type="button" variant="outline" href="#" className={``}>
+            Submit a request
+          </Link>
+          <Link type="button" variant="primary" href="#" className={``}>
+            Sign in
+          </Link>
+        </div>
       </Container>
-      <Menu
-        menuOpen={menuOpen}
-        className={`absolute left-0 right-0 top-full`}
-      />
-      <SearchForm
-        type="nav"
-        onClose={() => setSearchOpen(false)}
-        className={clsx(
-          `absolute inset-0 left-0 top-0 origin-center duration-300 ease-in-out`,
-          searchOpen
-            ? "[transform:rotateX(0deg)]"
-            : "[transform:rotateX(-90deg)]",
-        )}
-      />
+      <div className="xl:hidden">
+        <Menu
+          menuOpen={menuOpen}
+          className={`absolute left-0 right-0 top-full`}
+        />
+        <SearchForm
+          type="nav"
+          onClose={() => setSearchOpen(false)}
+          className={clsx(
+            `absolute inset-0 left-0 top-0 origin-center duration-300 ease-in-out`,
+            searchOpen
+              ? "[transform:rotateX(0deg)]"
+              : "[transform:rotateX(-90deg)]",
+          )}
+        />
+      </div>
     </nav>
   );
 };
