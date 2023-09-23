@@ -1,13 +1,20 @@
+import Layout from "src/components/Layout";
 import Header from "./components/Header";
-
+import Container from "src/components/Container";
+import { benefits } from "src/data";
+import Benefit from "src/components/Benefit";
 function App() {
   return (
-    <div
-      id="app"
-      className="min-h-screen select-none bg-white font-body text-base"
-    >
+    <Layout>
       <Header />
-    </div>
+      <main className="py-24">
+        <Container className={`flex flex-col items-start gap-24`}>
+          {benefits.map(({ title, content, imgSrc }, i) => (
+            <Benefit key={i} title={title} content={content} imgSrc={imgSrc} />
+          ))}
+        </Container>
+      </main>
+    </Layout>
   );
 }
 
