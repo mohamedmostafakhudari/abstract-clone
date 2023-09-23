@@ -15,7 +15,7 @@ const Navbar = () => {
   return (
     <nav id="nav" className="relative bg-black py-8 text-2xl text-white">
       <Container className="flex flex-wrap items-center justify-between gap-y-4">
-        <div className="flex items-center">
+        <div className="flex flex-wrap items-center">
           <a
             href="#"
             className="mr-3 flex items-center gap-2 border-r-2 pr-3 duration-200 ease-in-out hover:text-white/80"

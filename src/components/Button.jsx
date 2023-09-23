@@ -1,27 +1,39 @@
 import { cva } from "class-variance-authority";
 import React from "react";
-const button = cva("text-white rounded-md duration-200 ease-in-out", {
-  variants: {
-    intent: {
-      primary: "bg-primary hover:bg-white hover:text-black",
-      secondary: "bg-transparent border",
+const button = cva(
+  "text-white rounded-md duration-200 ease-in-out font-bold cursor-pointer",
+  {
+    variants: {
+      intent: {
+        primary: "bg-primary hover:bg-white hover:text-black",
+        secondary: "bg-transparent border",
+      },
+      size: {
+        small: ["text-sm", "py-2", "px-4"],
+        medium: ["text-base", "py-2", "px-6"],
+      },
     },
-    size: {
-      small: ["text-sm", "py-1", "px-2"],
-      medium: ["text-base", "py-2", "px-4"],
+
+    defaultVariants: {
+      intent: "primary",
+      size: "medium",
     },
   },
+);
 
-  defaultVariants: {
-    intent: "primary",
-    size: "medium",
-  },
-});
-
-const Button = ({ intent, size, type, className, children, ...props }) => {
+const Button = ({
+  intent,
+  size,
+  type,
+  icon,
+  className,
+  children,
+  ...props
+}) => {
   if (type === "link") {
     return (
       <a className={button({ intent, size, className })} {...props}>
+        {icon && icon}
         {children}
       </a>
     );

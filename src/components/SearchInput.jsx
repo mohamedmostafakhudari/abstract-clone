@@ -1,7 +1,14 @@
 import clsx from "clsx";
 import React from "react";
 
-const SearchInput = ({ className, icon }) => {
+const SearchInput = ({
+  className,
+  icon,
+  searchTerm,
+  onChange,
+  onClick,
+  onKeyDown,
+}) => {
   return (
     <div className="relative">
       <input
@@ -13,9 +20,15 @@ const SearchInput = ({ className, icon }) => {
           className,
         )}
         autoComplete="off"
+        value={searchTerm}
+        onChange={onChange}
+        onKeyDown={onKeyDown}
       />
       {icon && (
-        <button className="absolute right-4 top-1/2 -mr-4 -translate-y-1/2 rounded-md px-4 py-5 duration-200 ease-in-out hover:text-primary peer-hover:text-primary">
+        <button
+          onClick={onClick}
+          className="absolute right-4 top-1/2 -mr-4 -translate-y-1/2 rounded-md px-4 py-5 duration-200 ease-in-out hover:text-primary peer-hover:text-primary"
+        >
           {icon}
         </button>
       )}

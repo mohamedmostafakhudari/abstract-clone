@@ -34,3 +34,92 @@ export const benefits = [
     imgSrc: helpDesk,
   },
 ];
+export const footerItems = [
+  {
+    title: "Abstract",
+    links: [
+      {
+        name: "Start Trial",
+        href: "#",
+      },
+      {
+        name: "P.ricing",
+        href: "#",
+      },
+      {
+        name: "Download",
+        href: "#",
+      },
+    ],
+    subItem: null,
+  },
+  {
+    title: "Resources",
+    links: [
+      {
+        name: "Blog",
+        href: "#",
+      },
+      {
+        name: "Help Center",
+        href: "#",
+      },
+      {
+        name: "Release Notes",
+        href: "#",
+      },
+      {
+        name: "Status",
+        href: "#",
+      },
+    ],
+    subItem: null,
+  },
+  {
+    title: "Community",
+    links: [
+      {
+        name: "Twitter",
+        href: "#",
+      },
+      {
+        name: "LinkedIn",
+        href: "#",
+      },
+      {
+        name: "Facebook",
+        href: "#",
+      },
+      {
+        name: "Dribbble",
+        href: "#",
+      },
+      {
+        name: "Podcast",
+        href: "#",
+      },
+    ],
+    subItem: null,
+  },
+  {
+    title: "Company",
+    links: [
+      {
+        name: "About Us",
+        href: "#",
+      },
+      {
+        name: "Careers",
+        href: "#",
+      },
+      {
+        name: "Legal",
+        href: "#",
+      },
+    ],
+    subItem: {
+      title: "Contact Us",
+      link: "info@abstract.com",
+    },
+  },
+];
