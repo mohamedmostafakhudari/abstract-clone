@@ -17,6 +17,7 @@ export default {
         body: ["Open Sans", "sans-serif"],
       },
       screens: {
+        sm: "501px",
         xl: "1200px",
       },
     },

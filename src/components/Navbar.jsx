@@ -4,7 +4,7 @@ import LogoIcon from "./LogoIcon";
 import BarsIcon from "../BarsIcon";
 import Menu from "./Menu";
 import { FaSearch } from "react-icons/fa";
-import SearchForm from "./SearchForm";
+import NavSearchForm from "./NavSearchForm";
 import clsx from "clsx";
 import Link from "./Link";
 
@@ -13,7 +13,7 @@ const Navbar = () => {
   const [searchOpen, setSearchOpen] = React.useState(false);
   return (
     <nav id="nav" className="relative bg-black py-8 text-2xl text-white">
-      <Container className="flex items-center justify-between">
+      <Container className="flex flex-wrap items-center justify-between gap-y-4">
         <div className="flex items-center">
           <a
             href="#"
@@ -22,7 +22,7 @@ const Navbar = () => {
             <LogoIcon />
             <span className="block font-semibold">Abstract</span>
           </a>
-          <a className="cursor-pointer tracking-tight hover:underline">
+          <a className="cursor-pointer whitespace-nowrap tracking-tight hover:underline">
             Help Center
           </a>
         </div>
@@ -47,7 +47,7 @@ const Navbar = () => {
           menuOpen={menuOpen}
           className={`absolute left-0 right-0 top-full`}
         />
-        <SearchForm
+        <NavSearchForm
           type="nav"
           onClose={() => setSearchOpen(false)}
           className={clsx(

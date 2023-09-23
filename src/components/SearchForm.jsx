@@ -1,21 +1,22 @@
 import React from "react";
 import Container from "./Container";
-import { GrFormClose } from "react-icons/gr";
-import clsx from "clsx";
 import SearchInput from "./SearchInput";
+import { FaArrowRight } from "react-icons/fa";
 
-const SearchForm = ({ type, onClose, className }) => {
+const SearchForm = () => {
   return (
     <form
       action="/"
-      method="GET"
-      className={clsx("bg-white text-base text-black", className)}
+      className="bg-neutral py-24 pb-28 text-center font-semibold"
     >
-      <Container className={`flex items-center py-5`}>
-        <SearchInput className="flex-1" />
-        <div onClick={onClose} className="group cursor-pointer p-4">
-          <GrFormClose className="min-w-[16px] shrink-0 text-2xl duration-200 ease-in-out group-hover:scale-125" />
+      <Container className={`flex flex-col gap-10 md:max-w-screen-md`}>
+        <div className="whitespace-nowrap text-4xl tracking-tighter sm:text-6xl md:text-7xl">
+          How can we help?
         </div>
+        <SearchInput
+          className={`peer w-full py-5 duration-200 ease-in-out hover:border-primary`}
+          icon={<FaArrowRight />}
+        />
       </Container>
     </form>
   );
