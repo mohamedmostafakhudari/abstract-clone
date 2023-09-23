@@ -4,7 +4,7 @@ import Link from "src/components/Link";
 
 const Benefit = ({ title, content, imgSrc }) => {
   return (
-    <div className="flex items-start justify-center gap-6">
+    <div className="flex justify-start gap-6">
       <div className="max-w-[70px]">
         <img src={imgSrc} alt="" />
       </div>

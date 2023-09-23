@@ -10,7 +10,7 @@ function App() {
       <main className="">
         <SearchForm />
         <section className="py-24">
-          <Container className={`flex flex-col items-start gap-24`}>
+          <Container className={`grid grid-cols-1 gap-24 md:grid-cols-2`}>
             {benefits.map(({ title, content, imgSrc }, i) => (
               <Benefit
                 key={i}
