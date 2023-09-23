@@ -1,10 +1,11 @@
 import React from "react";
 import SearchForm from "./SearchForm";
+import Navbar from "src/components/Navbar";
 
 const Header = () => {
   return (
     <header>
-      <SearchForm />
+      <Navbar />
     </header>
   );
 };

@@ -7,6 +7,7 @@ import { FaSearch } from "react-icons/fa";
 import NavSearchForm from "./NavSearchForm";
 import clsx from "clsx";
 import Link from "./Link";
+import Button from "src/components/Button";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = React.useState(false);
@@ -22,9 +23,9 @@ const Navbar = () => {
             <LogoIcon />
             <span className="block font-semibold">Abstract</span>
           </a>
-          <a className="cursor-pointer whitespace-nowrap tracking-tight hover:underline">
+          <Link intent="secondary" size="large" href="#">
             Help Center
-          </a>
+          </Link>
         </div>
         <div className="flex items-center gap-4 xl:hidden">
           <FaSearch
@@ -34,12 +35,12 @@ const Navbar = () => {
           <BarsIcon menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
         </div>
         <div className="hidden items-center gap-4 xl:flex">
-          <Link type="button" variant="outline" href="#" className={``}>
+          <Button intent="secondary" type="link" href="#" className={``}>
             Submit a request
-          </Link>
-          <Link type="button" variant="primary" href="#" className={``}>
+          </Button>
+          <Button type="link" href="#" className={``}>
             Sign in
-          </Link>
+          </Button>
         </div>
       </Container>
       <div className="xl:hidden">

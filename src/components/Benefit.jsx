@@ -1,5 +1,6 @@
 import React from "react";
 import { HiArrowLongRight } from "react-icons/hi2";
+import Link from "src/components/Link";
 
 const Benefit = ({ title, content, imgSrc }) => {
   return (
@@ -12,9 +13,13 @@ const Benefit = ({ title, content, imgSrc }) => {
           <h4 className="font-bold">{title}</h4>
           <p>{content}</p>
         </div>
-        <a href="#" className="flex w-fit items-center gap-2 text-primary">
-          Learn More <HiArrowLongRight />
-        </a>
+        <Link
+          href="#"
+          icon={<HiArrowLongRight className="" />}
+          className="flex w-fit items-center gap-2"
+        >
+          Learn More
+        </Link>
       </div>
     </div>
   );
