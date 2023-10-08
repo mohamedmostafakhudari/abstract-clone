@@ -28,7 +28,7 @@ function App() {
         <Button
           intent="primary"
           size="small"
-          className={`fixed bottom-2 right-4 flex items-center gap-2 rounded-full hover:bg-primary hover:text-white`}
+          className={`fixed bottom-2 right-4 flex items-center gap-2 rounded-full hover:bg-white hover:text-primary`}
           type="link"
           icon={<BsQuestionCircle />}
         >
